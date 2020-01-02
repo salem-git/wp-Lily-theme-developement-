@@ -23,7 +23,7 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			// get_template_part( 'template-parts/content', 'page' );
+			get_template_part( 'template-parts/content', 'page' );
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
@@ -36,7 +36,10 @@ get_header();
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-
+<?php
+get_sidebar();
+get_footer();
+?>
 
 
 
@@ -163,19 +166,22 @@ get_header();
 
     <aside class="col-md-4 blog-sidebar">
  
-    
-	<?php get_sidebar(); ?>
+     <?php if(is_active_sidebar('sidebar')): ?>
+      <?php dynamic_sidebar('sidebar'); ?>
+     <?php endif; ?>
     </aside><!-- /.blog-sidebar -->
 
   </div><!-- /.row -->
 
 </main><!-- /.container -->
 
-
+<footer class="blog-footer">
+  <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+  <p>
+    <a href="#">Back to top</a>
+  </p>
+</footer>
 <script type="text/javascript" src="js/bootstrap"></script>
 </body>
 </html>
-<?php
-get_sidebar();
-get_footer();
-?>
+
