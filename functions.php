@@ -103,7 +103,7 @@ add_action( 'after_setup_theme', 'wp_lily_content_width', 0 );
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function wp_lily_widgets_init($id) {
+function wp_lily_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'wp-lily' ),
 		'id'            => 'sidebar-1',
@@ -113,15 +113,51 @@ function wp_lily_widgets_init($id) {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-}
+	register_sidebar( array(
+		'name' => 'Footer Sidebar 1',
+		'id' => 'footer-sidebar-1',
+		'description' => 'Appears in the footer area',
+		'before_widget' => '<aside id="%1$s" class="footer-widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="footer-widget-title">',
+		'after_title' => '</h3>',
+		) );
+	  register_sidebar( array(
+		'name' => 'Footer Sidebar 2',
+		'id' => 'footer-sidebar-2',
+		'description' => 'Appears in the footer area',
+		'before_widget' => '<aside id="%1$s" class="footer-widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="footer-widget-title">',
+		'after_title' => '</h3>',
+		) );
+	  register_sidebar( array(
+		'name' => 'Footer Sidebar 3',
+		'id' => 'footer-sidebar-3',
+		'description' => 'Appears in the footer area',
+		'before_widget' => '<aside id="%1$s" class="footer-widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="footer-widget-title">',
+		'after_title' => '</h3>',
+		) );
+	  register_sidebar( array(
+		'name' => 'Footer Sidebar 4',
+		'id' => 'footer-sidebar-4',
+		'description' => 'Appears in the footer area',
+		'before_widget' => '<aside id="%1$s" class="footer-widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="footer-widget-title">',
+		'after_title' => '</h3>',
+		) );
+	}
+
 add_action( 'widgets_init', 'wp_lily_widgets_init' );
-
-
 
 /**
  * Enqueue scripts and styles.
  */
 function wp_lily_scripts() {
+	wp_enqueue_style( "customcss", get_template_directory_uri().'/assets/css/customcss.css', array(), '1.0', 'all' );
 	wp_enqueue_style( 'wp-lily-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'wp-lily-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -134,7 +170,11 @@ function wp_lily_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'wp_lily_scripts' );
 
-class salem_NavBar extends Walker_Nav_Menu
+
+
+
+
+class lily_navbar extends Walker_Nav_Menu
 {
     public function start_lvl( &$output, $depth = 0, $args = array() ) {
         $indent = str_repeat("\t", $depth);
@@ -252,3 +292,16 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+function RadTheme_enqueue_styles() {
+
+    wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
+    wp_enqueue_style( 'core', get_template_directory_uri() . '/style.css' );
+  
+  }
+  add_action( 'wp_enqueue_scripts', 'RadTheme_enqueue_styles');
+  
+  function RadTheme_enqueue_scripts() {
+    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/vendor/bootstrap.bundle.min.js', array( 'jquery' ) );
+  }
+  add_action( 'wp_enqueue_scripts', 'RadTheme_enqueue_scripts');
