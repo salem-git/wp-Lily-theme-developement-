@@ -987,7 +987,27 @@ object {
 
 /* custom css */
 #footer-sidebar{
-	background-color:#404040;
+	background-color:#000;
 	color: #fff;
 	padding: 25px;
+}
+
+.showcase{
+	height: 600px;
+	padding: 100px 20px;
+	text-align: center;
+	border-bottom: #ccc 1px solid;
+	margin-bottom: 30px;
+	color: #fff;
+	background:#333 url('../assets/images/gebeya.jfif') no-repeat center center;
+}
+.showcase h1{
+	font-size: 55px;
+	padding-bottom: 20px;
+	color: #fff;
+}
+
+.showcase p{
+	font-size: 20px;
+	margin-bottom: 50px;
 }
