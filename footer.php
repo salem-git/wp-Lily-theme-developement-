@@ -57,6 +57,7 @@
 				printf( esc_html__( 'Proudly powered by %s', 'wp-lily' ), 'WordPress' );
 				?>
 			</a>
+            <p>&copy; <?php echo Date('Y'); ?> -<?php bloginfo('name') ?></p>
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */

@@ -13,7 +13,7 @@
     <div class="container">
         <h1> <?php echo get_theme_mod('showcase_heading','Custom Bootstrap Wordpress Theme'); ?></h1>
         <p><?php echo get_theme_mod('showcase_text',' Sociis natoque penatibus et marign dis parturient'); ?> </p>
-        <a href="<?php echo get_theme_mod('btn_url','http://test.com'); ?>" class="btn btn-primary btn-lg"><?php echo get_theme_mod('btn_text','Read More'); ?></a>
+        <a href="<?php echo get_theme_mod('btn_url','blog'); ?>" class="btn btn-primary btn-lg"><?php echo get_theme_mod('btn_text','Read More'); ?></a>
     </div>
 </section>
 
