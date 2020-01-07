@@ -305,3 +305,13 @@ function RadTheme_enqueue_styles() {
     wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/vendor/bootstrap.bundle.min.js', array( 'jquery' ) );
   }
   add_action( 'wp_enqueue_scripts', 'RadTheme_enqueue_scripts');
+
+
+  //Excerpt length control
+
+  function set_excerpt_length(){
+	  return 45;
+
+  }
+
+  add_filter('excerpt_length','set_excerpt_length');
