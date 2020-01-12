@@ -1015,12 +1015,10 @@ object {
 
 /* 404 page */
 
-.col1, .col2, .col3 { 
-	width:30%;
-	float:left;
-	padding:0px 10px 10px 10px;
-	height:450px;
-	margin:0px;
+.col3 { 
+
+	float:center;
+	
 	}
 	.col3:after{
 	clear:both;
@@ -1032,3 +1030,4 @@ object {
 	padding:1px;
 	text-align:center;
 	}
+	
