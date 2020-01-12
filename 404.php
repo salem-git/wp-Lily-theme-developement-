@@ -1,60 +1,38 @@
 <?php
 /**
- * The template for displaying 404 pages (not found)
+ * The template for displaying 404 pages (Not Found)
  *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- *
- * @package wp-Lily
  */
+ 
+get_header(); ?>
 
-get_header();
-?>
+ 
+    <div id="primary" class="content-area">
+        <div id="content" class="site-content" role="main">
+ 
+            <header class="page-header">
+                <h1 class="page-title"><?php _e( 'Not found', 'twentythirteen' ); ?></h1>
+            </header>
+ 
+            <div class="page-wrapper">
+                <div class="page-content">
+                    <h2><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'twentythirteen' ); ?></h2>
+                    <p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentythirteen' ); ?></p>
+ 
+                    <?php get_search_form(); ?>
+                     
+                    <h3>Check out some of our popular content:</h3>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'wp-lily' ); ?></h1>
-				</header><!-- .page-header -->
-
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'wp-lily' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'wp-lily' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$wp_lily_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'wp-lily' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$wp_lily_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_footer();
+<div class="col3">
+<div class="col-header">          
+<h3>Recent Posts</h3>
+</div>
+ <?php wp_get_archives( array( 'type' => 'postbypost', 'limit' => 10, 'format' => 'custom', 'before' => '', 'after' => '<br />' ) ); ?>
+</div>
+                </div><!-- .page-content -->
+            </div><!-- .page-wrapper -->
+ 
+        </div><!-- #content -->
+    </div><!-- #primary -->
+ 
+<?php get_footer(); ?>

@@ -2,3 +2,21 @@ div.headerImage{
 
     content: url("../images/gebeya.jfif");
 }
+
+.col1, .col2, .col3 { 
+    width:30%;
+    float:left;
+    padding:0px 10px 10px 10px;
+    height:450px;
+    margin:0px;
+    }
+    .col3:after{
+    clear:both;
+    }
+    .col-header { 
+    background:#220e10;
+    color:#FFF;
+    margin:0px;
+    padding:1px;
+    text-align:center;
+    }

@@ -315,3 +315,52 @@ function RadTheme_enqueue_styles() {
   }
 
   add_filter('excerpt_length','set_excerpt_length');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //most commented
+  function wpb_most_commented_posts() { 
+	// start output buffering
+	ob_start();
+	?>
+	<ul class="most-commented">
+	<?php 
+	// Run WP_Query
+	// change posts_per_page value to limit the number of posts
+	$query = new WP_Query('orderby=comment_count&posts_per_page=10'); 
+	 
+	//begin loop
+	while ($query->have_posts()) : $query->the_post(); ?>
+	 
+	<li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a> <span class="wpb-comment-count"><?php comments_popup_link('No Comments;', '1 Comment', '% Comments'); ?></span></li>
+	<?php endwhile; 
+	// end loop
+	?>
+	</ul>
+	<?php
+	 
+	// Turn off output buffering
+	 $output = ob_get_clean(); 
+	 
+	//Return output 
+	return $output; 
+	}
+	// Create shortcode
+	add_shortcode('wpb_most_commented', 'wpb_most_commented_posts'); 
+	 
+	//Enable shortcode execution in text widgets
+	add_filter('widget_text', 'do_shortcode');
