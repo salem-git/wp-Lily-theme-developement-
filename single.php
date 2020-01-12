@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package wp-Lily
+ * @package wp-Lily4
  */
 
 get_header();
