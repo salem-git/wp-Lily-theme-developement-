@@ -35,7 +35,7 @@ function wp_lily_customize_register( $wp_customize ) {
 	));
 
 	$wp_customize->add_setting('showcase_image',array(
-		'default' => get_bloginfo('template_directory').'/assets/image/gebeya.jfif',
+		'default' => get_bloginfo('template_directory').'/assets/img/gebeya.jfif',
 		'type' => 'theme_mod'
 	));
 
