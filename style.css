@@ -1032,3 +1032,48 @@ object {
 	}
 	
 
+/* comment */
+
+.comments{
+	border:1px #ccc solid;
+	padding:10px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+.comments h3, .comments h2{
+	background: #f4f4f4;
+	color:#333;
+	padding:5px;
+}
+
+.comments-body{
+	border:#ccc solid 1px;
+	margin-bottom: 10px;
+	padding: 20px 10px;
+}
+.comments-meta{
+	background:#428bca;
+	color:#fff;
+	padding: 10px;
+	overflow:auto;
+}
+
+.comment-meta img{
+	float:left;
+	margin-right:10px;
+}
+.comment-reply-link{
+	background:#428bca;
+	color:#fff;
+	display:inline-block;
+	pading 10px 15px;
+}
+
+.comment-form input, .comment-form textarea{
+	width: 100%;
+	padding: 4px;
+	border:#ccc solid 1px;
+	margin-bottom:15px ;
+}
+
