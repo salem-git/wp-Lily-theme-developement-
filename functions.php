@@ -79,6 +79,10 @@ if ( ! function_exists( 'wp_lily_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+
+		//Post formats
+		add_theme_support('post-formats',array('aside','gallery'));
 	}
 endif;
 add_action( 'after_setup_theme', 'wp_lily_setup' );
