@@ -989,7 +989,7 @@ object {
 #footer-sidebar{
 	background-color:#000;
 	color: #fff;
-	padding: 25px;
+	padding: 25px;  
 }
 
 .showcase{
@@ -1077,3 +1077,16 @@ object {
 	margin-bottom:15px ;
 }
 
+/* photo gallery */
+
+.post-gallery {
+	background:#333;
+	color:#fff;
+	padding:10px;
+	text-align: center;
+
+}
+
+.post-gallery h2{
+	color:#fff;
+}
