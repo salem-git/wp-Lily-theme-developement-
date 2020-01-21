@@ -1090,3 +1090,13 @@ object {
 .post-gallery h2{
 	color:#fff;
 }
+
+
+/* post format aside */
+.post-aside{
+	border:#ccc solid 1px;
+	background:#ccc;
+}
+.well{
+	text-align: justify;
+}
