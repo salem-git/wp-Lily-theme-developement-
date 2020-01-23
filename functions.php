@@ -153,6 +153,36 @@ function wp_lily_widgets_init() {
 		'before_title' => '<h3 class="footer-widget-title">',
 		'after_title' => '</h3>',
 		) );
+
+		// boxes on the front page
+
+		register_sidebar( array(
+			'name' => 'Box1',
+			'id' => 'box1',
+			'before_widget' => '<aside id="%1$s" class="box">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h3 class="footer-widget-title">',
+			'after_title' => '</h3>',
+			) );
+
+		register_sidebar( array(
+				'name' => 'Box2',
+				'id' => 'box2',
+				'before_widget' => '<aside id="%1$s" class="box">',
+				'after_widget' => '</aside>',
+				'before_title' => '<h3 class="footer-widget-title">',
+				'after_title' => '</h3>',
+				) );	
+
+		register_sidebar( array(
+					'name' => 'Box3',
+					'id' => 'box3',
+					'before_widget' => '<aside id="%1$s" class="box">',
+					'after_widget' => '</aside>',
+					'before_title' => '<h3 class="footer-widget-title">',
+					'after_title' => '</h3>',
+					) );
+
 	}
 
 add_action( 'widgets_init', 'wp_lily_widgets_init' );
