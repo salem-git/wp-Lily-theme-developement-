@@ -19,7 +19,7 @@ get_header();
 <div class="headerImage"></div>
   <div class="row">
     <div class="col-sm-8">
-    <div class="blog"> <h1>BLOG POSTS</h1> </div>
+      <div class="blog"> <h1>BLOG POSTS</h1> </div>
       <div id="primary" class="content-area">
         <main id="main" class="site-main">
     
@@ -57,6 +57,8 @@ get_header();
 
         endif;
         ?>
+
+       
 
         </main><!-- #main -->
       </div><!-- #primary -->

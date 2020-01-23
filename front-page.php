@@ -17,4 +17,38 @@
     </div>
 </section>
 
+<section class="boxes">
+          <div class="container">
+            <div class="row">
+
+            <div class="col-md-4">
+                <div class="box">
+                <i class="fa fa-users" aria-hidden="true"></i>
+                <h3>Lorem Ipsum users</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="box">
+                <i class="fa fa-gears" aria-hidden="true"></i>
+                <h3>Lorem Ipsum users</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="box">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <h3>Lorem Ipsum users</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                
+                </div>
+              </div>
+            </div>         
+          </div>
+        </section>
+
 <?php get_footer(); ?>
