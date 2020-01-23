@@ -22,30 +22,23 @@
             <div class="row">
 
             <div class="col-md-4">
-                <div class="box">
-                <i class="fa fa-users" aria-hidden="true"></i>
-                <h3>Lorem Ipsum users</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                
-                </div>
+
+                <?php if(is_active_sidebar('box1')): ?>
+                  <?php dynamic_sidebar('box1'); ?>
+                <?php endif; ?>
+
               </div>
 
               <div class="col-md-4">
-                <div class="box">
-                <i class="fa fa-gears" aria-hidden="true"></i>
-                <h3>Lorem Ipsum users</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                
-                </div>
+                <?php if(is_active_sidebar('box2')): ?>
+                  <?php dynamic_sidebar('box2'); ?>
+                <?php endif; ?>
               </div>
 
               <div class="col-md-4">
-                <div class="box">
-                <i class="fa fa-search" aria-hidden="true"></i>
-                <h3>Lorem Ipsum users</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                
-                </div>
+                <?php if(is_active_sidebar('box3')): ?>
+                  <?php dynamic_sidebar('box3'); ?>
+                <?php endif; ?>
               </div>
             </div>         
           </div>
