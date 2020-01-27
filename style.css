@@ -1132,7 +1132,12 @@ object {
 
 footer .site-info{
 	text-align: center;
-	margin-left: 520px;
+	margin-left: 50px;
 }
 
 
+
+.site nav{
+	background: #eee;
+	margin-top: 50px;
+}

@@ -51,8 +51,10 @@
 			),
 			get_the_title()
 		) );
-		else:
-			the_excerpt( sprintf(
+		else:?>
+			<div class="card">
+			<div class="card-body">
+			<?php the_excerpt( sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
 					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'wp-lily' ),
@@ -69,7 +71,10 @@
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wp-lily' ),
 			'after'  => '</div>',
 		) );
+
 		?>
+		<a href="<?php the_permalink();?>" class="btn btn-success">Read More</a>
+		</div></div>
 		<?php endif; ?>
 	</div><!-- .entry-content -->
 
