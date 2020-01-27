@@ -52,8 +52,11 @@
 			get_the_title()
 		) );
 		else:?>
-			<div class="card">
+			<div class="card mb-4">
 			<div class="card-body">
+				<?php if(has_post_thumbnail()): ?>
+					<img src="<?php the_post_thumbnail_url( 'smallest'); ?>" class="img-fluid">
+				<?php endif; ?>
 			<?php the_excerpt( sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
@@ -73,6 +76,7 @@
 		) );
 
 		?>
+
 		<a href="<?php the_permalink();?>" class="btn btn-success">Read More</a>
 		</div></div>
 		<?php endif; ?>

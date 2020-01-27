@@ -354,7 +354,8 @@ function RadTheme_enqueue_styles() {
 
 
 
-
+add_image_size('smallest',100,100,true);
+add_image_size('largest',800,800,true);
 
 
 
