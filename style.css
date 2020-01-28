@@ -1168,3 +1168,9 @@ footer .site-info{
 	
 }
 
+.logo{
+	width: 90px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
