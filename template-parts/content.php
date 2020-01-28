@@ -86,11 +86,14 @@
 		?>
 
 		<a href="<?php the_permalink();?>" class="btn btn-success">Read More</a>
-		</div></div>
+		
+		<footer class="entry-footer">
+		<?php wp_lily_entry_footer(); ?>
+	   </footer><!-- .entry-footer -->
+		
+	   </div></div>
 		<?php endif; ?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php wp_lily_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	
 </article><!-- #post-<?php the_ID(); ?> -->
