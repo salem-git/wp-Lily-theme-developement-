@@ -85,7 +85,7 @@
 
 		?>
 
-		<a href="<?php the_permalink();?>" class="btn btn-success">Read More</a>
+		<a href="<?php the_permalink();?>" id="read_more_button" class="btn btn-success">Read More</a>
 		
 		<footer class="entry-footer">
 		<?php wp_lily_entry_footer(); ?>
