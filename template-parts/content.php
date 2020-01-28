@@ -17,20 +17,19 @@
 			
 			the_title( '<h1 class="entry-title">', '</h1>' );
 			// the_content();
-			
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				wp_lily_posted_on();
-				wp_lily_posted_by();
+			if ( 'post' === get_post_type() ) :
 				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
+				<div class="entry-meta">
+					<?php
+					wp_lily_posted_on();
+					wp_lily_posted_by();
+					?>
+				</div><!-- .entry-meta -->
+			<?php endif; ?>
+		
+		<?php endif;?>
+
+
 	</header><!-- .entry-header -->
 
 	<?php wp_lily_post_thumbnail(); ?>
@@ -54,7 +53,16 @@
 		else:?>
 			<div class="card mb-4">
 			<div class="card-body">
+			<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 				<?php if(has_post_thumbnail()): ?>
+						<?php if ( 'post' === get_post_type() ) :?>
+							<div class="entry-meta">
+								<?php
+								wp_lily_posted_on();
+								wp_lily_posted_by();
+								?>
+							</div><!-- .entry-meta -->
+					   <?php endif; ?>
 					<img src="<?php the_post_thumbnail_url( 'smallest'); ?>" class="img-fluid">
 				<?php endif; ?>
 			<?php the_excerpt( sprintf(
