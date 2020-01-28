@@ -31,6 +31,11 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
+    <div class="logo">
+     <?php   if ( function_exists( 'the_custom_logo' ) ) {
+        the_custom_logo();
+        } ?>
+    </div>
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-lily' ); ?></a>
 	<nav id="site-navigation"  class="navbar navbar-expand-md navbar-dark top bg-dark">
     <a class="navbar-brand" href="#">

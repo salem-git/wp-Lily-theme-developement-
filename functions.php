@@ -360,6 +360,21 @@ add_image_size('largest',800,800,true);
 
 
 
+//logo
+add_theme_support( 'custom-logo' );
+
+function themename_custom_logo_setup() {
+	$defaults = array(
+	'height'      => 10,
+	'width'       => 40,
+	'flex-height' => true,
+	'flex-width'  => true,
+	'header-text' => array( 'site-title', 'site-description' ),
+	);
+	add_theme_support( 'custom-logo', $defaults );
+   }
+   add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
+
 
 
 
