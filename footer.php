@@ -58,7 +58,7 @@
 				?>
 			</a>
             
-			<span class="sep"> | </span> <p>&copy; <?php echo Date('Y'); ?> -<?php bloginfo('name') ?></p>
+			<span class="sep">  </span> <p>&copy; <?php echo Date('Y'); ?> -<?php bloginfo('name') ?></p>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
 				// printf( esc_html__( 'Theme: %1$s by %2$s.', 'wp-lily' ), 'wp-lily', '<a href="http://underscores.me/">Underscores.me</a>' );
