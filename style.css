@@ -1140,7 +1140,7 @@ footer .site-info{
 
 .site nav{
 	background: #eee;
-	margin-top: 50px;
+	
 }
 
 
@@ -1155,7 +1155,6 @@ footer .site-info{
 
 .entry-footer{
 	margin-top: 30px;
-	
 }
 
 #widget-area{
@@ -1169,8 +1168,13 @@ footer .site-info{
 }
 
 .logo{
-	width: 90px;
+	width: 50px;
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: -20px;
+	margin-right: 15px;
+	
+}
+
+.menus{
+	margin-right: -20px;
 }

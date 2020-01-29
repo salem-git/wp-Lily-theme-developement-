@@ -31,18 +31,21 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
+
+    <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-lily' ); ?></a>
+    
+	<nav id="site-navigation"  class="navbar navbar-expand-md navbar-dark top bg-dark">
     <div class="logo">
      <?php   if ( function_exists( 'the_custom_logo' ) ) {
         the_custom_logo();
         } ?>
     </div>
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-lily' ); ?></a>
-	<nav id="site-navigation"  class="navbar navbar-expand-md navbar-dark top bg-dark">
     <a class="navbar-brand" href="#">
         <?php bloginfo('name'); ?>
     </a>
     <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'wp-lily' ); ?></button>
-	<?php
+	<div class="menus">
+    <?php
             wp_nav_menu([
             'menu'            => 'primary',
             'theme_location'  => 'menu-1',
@@ -55,7 +58,7 @@
             'fallback_cb'     => 'functions::fallback',
             'walker'          => new lily_navbar()
             ]);
-        ?>
+        ?></div>
 	</nav>
 </div>
 
